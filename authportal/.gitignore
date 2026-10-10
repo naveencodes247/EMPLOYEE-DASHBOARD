@@ -1,0 +1,13 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Agent configs and local tools
+.agents/
+skills-lock.json
+*.tmp

@@ -1,0 +1,23 @@
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+build/
+**/build/
+.env*
+!.env.example
+**/.env*
+!**/.env.example
+*.log
+.DS_Store
+
+# Temporary files and personal captures
+WhatsApp Image*
+*.tmp
+*.temp
+
+# Agent configs and local tools
+.agents/
+**/.agents/
+skills-lock.json
+**/skills-lock.json

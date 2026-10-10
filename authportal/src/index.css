@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, .dark, .dark *));
+
+:root {
+  /* Specification Palette - Genuinely white and minimal light mode */
+  --bg-app: #F8F9FA;              /* Clean off-white */
+  --bg-card: #FFFFFF;             /* Pure white card */
+  --bg-card-subtle: #F3F4F6;      /* Subtle clean gray surface */
+  --bg-input: #FFFFFF;
+  
+  /* Text */
+  --text-primary: #111827;        /* Crisp dark readable text */
+  --text-secondary: #4B5563;      /* Slate neutral */
+  --text-muted: #6B7280;          /* Muted grey */
+  
+  /* Borders */
+  --border-subtle: #E5E7EB;       /* Subtle clean gray border */
+  --border-focus: #C5A059;        /* Restrained gold accent */
+  
+  /* Accents */
+  --accent-gold: #C5A059;         /* Restrained gold */
+  --accent-gold-hover: #B08D46;
+  --accent-gold-subtle: #FAF5EB;
+  --accent-gold-border: #E8D8B6;
+  
+  --accent-yellow: #F6E05E;
+  --accent-yellow-subtle: #FEFCBF;
+  --accent-yellow-border: #ECC94B;
+  
+  --charcoal-solid: #1F2937;
+  --charcoal-hover: #111827;
+  
+  /* Feedback */
+  --error-bg: #FEF2F2;
+  --error-border: #FECACA;
+  --error-text: #991B1B;
+  
+  --success-bg: #F0FDF4;
+  --success-border: #BBF7D0;
+  --success-text: #166534;
+}
+
+[data-theme="dark"],
+.dark {
+  /* Dark Mode - Deep Charcoal & Restrained Gold Accents */
+  --bg-app: #111215;              /* Deep obsidian charcoal */
+  --bg-card: #1A1B20;             /* Appropriately contrasting dark card */
+  --bg-card-subtle: #222329;      /* Elevated surface */
+  --bg-input: #16171B;
+  
+  /* Text */
+  --text-primary: #F3F4F6;        /* Readable light text */
+  --text-secondary: #9CA3AF;      /* Soft grey */
+  --text-muted: #6B7280;          /* Muted grey */
+  
+  /* Borders */
+  --border-subtle: #27282F;       /* Subtle dark border */
+  --border-focus: #C5A059;        /* Restrained gold */
+  
+  /* Accents */
+  --accent-gold: #C5A059;         /* Restrained gold */
+  --accent-gold-hover: #D9B66F;
+  --accent-gold-subtle: #2A2417;
+  --accent-gold-border: #4A3E24;
+  
+  --accent-yellow: #F8E7A1;
+  --accent-yellow-subtle: #302C1B;
+  --accent-yellow-border: #524A2A;
+  
+  --charcoal-solid: #222329;
+  --charcoal-hover: #2C2D35;
+  
+  /* Feedback */
+  --error-bg: #2A1315;
+  --error-border: #4D1E22;
+  --error-text: #FCA5A5;
+  
+  --success-bg: #102619;
+  --success-border: #1B452D;
+  --success-text: #86EFAC;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Reduced motion preference support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
